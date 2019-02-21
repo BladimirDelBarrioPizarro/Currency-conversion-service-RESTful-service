@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class CurrencyConversionBean {
 
-    private Long  id;
+    private int  id;
     private String from;
     private String to;
     private BigDecimal conversionMultiple;

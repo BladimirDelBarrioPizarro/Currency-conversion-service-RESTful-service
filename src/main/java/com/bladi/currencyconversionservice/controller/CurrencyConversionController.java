@@ -12,5 +12,5 @@ import java.math.BigDecimal;
 public interface CurrencyConversionController{
 
     @GetMapping(path="/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
-    ResponseEntity<CurrencyConversionBean> convertCurrency(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity);
+    CurrencyConversionBean convertCurrency(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity);
 }
