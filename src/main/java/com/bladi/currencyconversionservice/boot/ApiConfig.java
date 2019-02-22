@@ -2,6 +2,7 @@ package com.bladi.currencyconversionservice.boot;
 
 import com.bladi.currencyconversionservice.controller.CurrencyConversionController;
 import com.bladi.currencyconversionservice.controllerImpl.CurrencyConversionControllerImpl;
+import com.bladi.currencyconversionservice.feign.CurrencyExchangeServiceProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class ApiConfig {
 
     @Bean
-    public CurrencyConversionController currencyConversionController(){return new CurrencyConversionControllerImpl();}
+    public CurrencyConversionController currencyConversionController(CurrencyExchangeServiceProxy CurrencyExchangeServiceProxy){return new CurrencyConversionControllerImpl(CurrencyExchangeServiceProxy);}
 
 }
