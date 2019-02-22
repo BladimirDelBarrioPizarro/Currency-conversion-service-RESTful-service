@@ -47,6 +47,7 @@ public class CurrencyConversionControllerImpl implements CurrencyConversionContr
         uriVariables.put("to",to);
         uriVariables.put("quantity", String.valueOf(quantity));
 
+
         ResponseEntity<CurrencyConversionBean> responseEntity = new RestTemplate().getForEntity("http://localhost:8000/api/currency-exchange/from/{from}/to/{to}",CurrencyConversionBean.class,uriVariables);
         CurrencyConversionBean response = proxy.retrieveExchangeValue(from,to);
 
